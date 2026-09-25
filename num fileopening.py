@@ -1,0 +1,22 @@
+import csv
+data = [
+    ["20", "high", "no", "fair", "no"],
+    ["16", "high", "no", "excellent", "no"],
+    ["45", "high", "no", "fair", "yes"],
+    ["72", "medium", "no", "fair", "yes"],
+    ["61", "low", "yes", "fair", "yes"],
+    ["67", "low", "yes", "excellent", "no"],
+    ["39", "low", "yes", "excellent", "yes"],
+    ["23", "medium", "no", "fair", "no"],
+    ["22", "low", "yes", "fair", "yes"],
+    ["77", "medium", "yes", "fair", "yes"],
+    ["17", "medium", "yes", "excellent", "yes"],
+    ["51", "medium", "no", "excellent", "yes"],
+    ["54", "high", "yes", "fair", "yes"],
+    ["82", "medium", "no", "excellent", "no"],
+]
+with open("numerical.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["AGE", "INCOME", "STUDENT", "CREDIT_RATING", "BUYS COMPUTER"])
+    for row in data:
+        writer.writerow(row)

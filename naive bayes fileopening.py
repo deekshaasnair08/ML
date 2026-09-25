@@ -1,0 +1,22 @@
+import csv
+data = [
+    ["youth", "high", "no", "fair", "no"],
+    ["youth", "high", "no", "excellent", "no"],
+    ["middle-aged", "high", "no", "fair", "yes"],
+    ["senior", "medium", "no", "fair", "yes"],
+    ["senior", "low", "yes", "fair", "yes"],
+    ["senior", "low", "yes", "excellent", "no"],
+    ["middle-aged", "low", "yes", "excellent", "yes"],
+    ["youth", "medium", "no", "fair", "no"],
+    ["youth", "low", "yes", "fair", "yes"],
+    ["senior", "medium", "yes", "fair", "yes"],
+    ["youth", "medium", "yes", "excellent", "yes"],
+    ["middle-aged", "medium", "no", "excellent", "yes"],
+    ["middle-aged", "high", "yes", "fair", "yes"],
+    ["senior", "medium", "no", "excellent", "no"],
+]
+with open("naive_bayes.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["AGE", "INCOME", "STUDENT", "CREDIT_RATING", "BUYS COMPUTER"])
+    for row in data:
+        writer.writerow(row)
