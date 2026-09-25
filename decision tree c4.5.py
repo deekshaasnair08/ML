@@ -46,9 +46,7 @@ for i in range(num_attr):
         total_size = len(rec)
         weight = subset_size / total_size
         
-        subset_entropy = calculate(subset)
-        
-        attr_info += weight * subset_entropy
+        attr_info += weight *  calculate(subset)
         attr_splitinfo -= weight * math.log2(weight)
         
     attr_gain = total_info - attr_info
